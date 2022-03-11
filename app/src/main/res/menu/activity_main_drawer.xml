@@ -31,7 +31,7 @@
             android:title="Rewards" />
         <item
             android:id="@+id/nav_contactus"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@android:drawable/ic_menu_call"
             android:title="Contact Us" />
         <item
             android:id="@+id/nav_feedback"
