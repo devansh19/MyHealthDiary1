@@ -15,12 +15,12 @@
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="113dp"
-        android:layout_height="98dp"
+        android:layout_width="112dp"
+        android:layout_height="103dp"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:text="Chandra Shekhar"
