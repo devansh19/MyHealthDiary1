@@ -42,17 +42,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.715" />
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="411dp"
-        android:layout_height="270dp"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/nav_host_fragment_content_main"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="SpeakableTextPresentCheck"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
