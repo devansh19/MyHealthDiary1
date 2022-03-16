@@ -10,7 +10,7 @@
     <string name="log_in">Log In</string>
     <string name="password">Password</string>
     <string name="todo">TODO</string>
-    <string name="todo">TODO</string>
+    <string name="todo1">TODO</string>
     <string name="poll">Poll</string>
     <string name="login">Login</string>
     <string name="profile">Profile</string>
@@ -19,7 +19,7 @@
     <string name="about_us">About Us</string>
     <string name="contact_us">Contact Us</string>
     <string name="feedback">Feedback</string>
-    <string name="register">Register</string>
+    <string name="register1">Register</string>
     <string name="drop_zone">Drop Zone</string>
     <string name="log_out">Log Out</string>
 </resources>
