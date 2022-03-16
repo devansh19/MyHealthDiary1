@@ -32,4 +32,20 @@
     <string name="e_mail">E-mail</string>
     <string name="create_new_password">Create New Password</string>
     <string name="phone_number">Phone Number</string>
+    <string name="new_here_create_account">New Here? Create Account</string>
+    <string name="log_in">Log In</string>
+    <string name="password">Password</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>
+    <string name="poll">Poll</string>
+    <string name="login">Login</string>
+    <string name="profile">Profile</string>
+    <string name="rewards">Rewards</string>
+    <string name="communicate">Communicate</string>
+    <string name="about_us">About Us</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="feedback">Feedback</string>
+    <string name="register">Register</string>
+    <string name="drop_zone">Drop Zone</string>
+    <string name="log_out">Log Out</string>
 </resources>

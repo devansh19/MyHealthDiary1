@@ -80,7 +80,7 @@
         android:autofillHints="" />
 
     <EditText
-        android:id="@+id/newPassword"
+        android:id="@+id/password"
         android:layout_width="378dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
@@ -120,7 +120,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newPassword"
+        app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="0.050000012" />
 
     <Button
@@ -142,6 +142,7 @@
         android:id="@+id/createText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="@string/title_activity_login"
         android:text="@string/already_registered_login_here"
         android:textColor="#FFEB3B"
         app:layout_constraintBottom_toBottomOf="parent"
