@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="@string/menu_home" />
+<!--        <item-->
+<!--            android:id="@+id/nav_gallery"-->
+<!--            android:icon="@drawable/ic_menu_gallery"-->
+<!--            android:title="@string/menu_gallery" />-->
+<!--        <item-->
+<!--            android:id="@+id/nav_slideshow"-->
+<!--            android:icon="@drawable/ic_menu_slideshow"-->
+<!--            android:title="@string/menu_slideshow" />-->
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_poll"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Poll" />
+        <item
+            android:id="@+id/nav_dropzone"
+            android:icon="@drawable/ic_menu_dropzone"
+            android:title="Drop Zone" />
+        <item
+            android:id="@+id/nav_rewards"
+            android:icon="@drawable/ic_menu_rewards"
+            android:title="Rewards" />
+        <item
+            android:id="@+id/nav_goals"
+            android:icon="@android:drawable/ic_menu_myplaces"
+            android:title="@string/menu_goals" />
+        <item
+            android:id="@+id/nav_joinus"
+            android:icon="@android:drawable/star_big_off"
+            android:title="@string/menu_joinus" />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="Profile">
+            <menu>
+                <item
+                    android:id="@+id/nav_login"
+                    android:icon="@drawable/ic_menu_login"
+                    android:title="Login" />
+                <item
+                    android:id="@+id/nav_register"
+                    android:icon="@drawable/ic_menu_register"
+                    android:title="Register" />
+
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/ic_menu_logout"
+                    android:title="Log Out" />
+            </menu>
+        </item>
+    </group>
+
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_aboutus"
+                android:icon="@drawable/ic_menu_aboutus"
+                android:title="About Us" />
+            <item
+                android:id="@+id/nav_contacts"
+                android:icon="@drawable/ic_baseline_contacts_24"
+                android:title="@string/menu_contact" />
+            <item
+                android:id="@+id/nav_feedback"
+                android:icon="@drawable/ic_menu_feedback"
+                android:title="Feedback" />
+        </menu>
+
+    </item>
+</menu>

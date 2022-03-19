@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_aboutus"
+        android:name="com.example.dispro.ui.aboutus.AboutusFragment"
+        android:label="@string/menu_aboutus"
+        tools:layout="@layout/fragment_aboutus" />
+
+    <fragment
+        android:id="@+id/nav_contacts"
+        android:name="com.example.dispro.ui.contacts.ContactFragment"
+        android:label="@string/menu_contact"
+        tools:layout="@layout/fragment_contact" />
+
+    <fragment
+        android:id="@+id/nav_dropzone"
+        android:name="com.example.dispro.ui.dropzone.DropzoneFragment"
+        android:label="@string/menu_dropzone"
+        tools:layout="@layout/fragment_dropzone" />
+
+    <fragment
+        android:id="@+id/nav_feedback"
+        android:name="com.example.dispro.ui.feedback.FeedbackFragment"
+        android:label="@string/menu_feedback"
+        tools:layout="@layout/fragment_feedback" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.dispro.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_goals"
+        android:name="com.example.dispro.ui.goals.goalsFragment"
+        android:label="@string/menu_goals"
+        tools:layout="@layout/fragment_goals" />
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.dispro.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_joinus"
+        android:name="com.example.dispro.ui.joinus.JoinusFragment"
+        android:label="@string/menu_joinus"
+        tools:layout="@layout/fragment_joinus" />
+
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.example.dispro.ui.login.LoginFragment"
+        android:label="@string/menu_login"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.example.dispro.ui.logout.LogoutFragment"
+        android:label="@string/menu_logout"
+        tools:layout="@layout/fragment_logout" />
+
+    <fragment
+        android:id="@+id/nav_poll"
+        android:name="com.example.dispro.ui.poll.PollFragment"
+        android:label="@string/menu_poll"
+        tools:layout="@layout/fragment_poll" />
+
+    <fragment
+        android:id="@+id/nav_register"
+        android:name="com.example.dispro.ui.register.RegisterFragment"
+        android:label="@string/menu_register"
+        tools:layout="@layout/fragment_register" />
+
+    <fragment
+        android:id="@+id/nav_rewards"
+        android:name="com.example.dispro.ui.reward.RewardFragment"
+        android:label="@string/menu_reward"
+        tools:layout="@layout/fragment_reward" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.dispro.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+</navigation>
