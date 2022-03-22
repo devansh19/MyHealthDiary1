@@ -22,6 +22,10 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="Poll" />
         <item
+            android:id="@+id/nav_contribute"
+            android:icon="@drawable/ic_menu_dropzone"
+            android:title="Contribute" />
+        <item
             android:id="@+id/nav_dropzone"
             android:icon="@drawable/ic_menu_dropzone"
             android:title="Drop Zone" />

@@ -24,6 +24,12 @@
         tools:layout="@layout/fragment_dropzone" />
 
     <fragment
+        android:id="@+id/nav_contribute"
+        android:name="com.example.dispro.ui.contribute.ContributeFragment"
+        android:label="@string/menu_contribute"
+        tools:layout="@layout/fragment_contribute" />
+
+    <fragment
         android:id="@+id/nav_feedback"
         android:name="com.example.dispro.ui.feedback.FeedbackFragment"
         android:label="@string/menu_feedback"
