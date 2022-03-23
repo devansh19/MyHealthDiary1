@@ -32,16 +32,8 @@ public class MainActivity extends AppCompatActivity {
         binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SocketSend socketSend = new SocketSend();
                 String msg="Working";
-                socketSend.execute("hi form app");
-//                Thread recthread = new Thread(new SocketRecive());
-//                recthread.start();
-//                try {
-//                    Thread.sleep(100);
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
+                msg=new Communicate().communicate("client msg");
                 Snackbar.make(view, msg, Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
