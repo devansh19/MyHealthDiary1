@@ -4,15 +4,23 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.dispro.Communicate;
+import com.example.dispro.R;
 import com.example.dispro.databinding.FragmentContactBinding;
 import com.example.dispro.databinding.FragmentLoginBinding;
 import com.example.dispro.ui.contacts.ContactViewModel;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class LoginFragment extends Fragment {
 
@@ -31,5 +39,34 @@ public class LoginFragment extends Fragment {
         loginViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
+    @Override
+    public void onStart() {
+        super.onStart();
+        Button login_button=(Button) getActivity().findViewById(R.id.submit_button);
 
+//        login_button.setOnClickListener(new View.OnClickListener() {
+//        @Override
+//        public void onClick(View view) {
+//            EditText Phno = (EditText) getActivity().findViewById(R.id.editTextPhone);
+//            EditText pass = (EditText) getActivity().findViewById(R.id.editTextPassword);
+//            String msg="Working";
+//            String feedback_text= Phno.getText().toString();
+//            String pass_text= pass.getText().toString();
+////            JSONObject det=new JSONObject();
+////            try {
+////                det.put("sec","login");
+////                det.put("phno",phno_text);
+////                det.put("pass",pass_text);
+////            } catch (JSONException e) {
+////                e.printStackTrace();
+////            }
+////            msg=new Communicate().communicate(det);
+//            Toast.makeText(getActivity(), "Thanks for your valuable feedback", Toast.LENGTH_SHORT).show();
+////                Fragment fragment= new tasks();
+////                FragmentManager fragmentManager=getActivity().getSupportFragmentManager();
+////                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+////                fragmentTransaction.replace(R.id.nav_host_fragment_content_main,R.id.HomeFragment);
+//            }
+//        });
+    }
 }
