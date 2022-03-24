@@ -1,7 +1,14 @@
 package com.example.dispro;
 
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -17,7 +24,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
     private GoogleMap mapApi;
-    private ActivityMapsBinding binding;
+
+    private LocationListener locationListener;
+    private LocationManager locationManager;
+    private final long MIN_TIME = 1000; // 1S
+    private final long MIN_DIST = 5; // 5 METERS
+    private LatLng latLng;
+
 
 
     SupportMapFragment mapFragment;
@@ -25,14 +38,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_maps);
 
-        binding = ActivityMapsBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.mapApi);
         mapFragment.getMapAsync(this);
+
+        ActivityCompat.requestPermissions(this,new String[]{ Manifest.permission.ACCESS_FINE_LOCATION},PackageManager.PERMISSION_GRANTED );
+        ActivityCompat.requestPermissions(this,new String[]{ Manifest.permission.ACCESS_COARSE_LOCATION },PackageManager.PERMISSION_GRANTED );
     }
 
     /**
@@ -50,7 +66,49 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         // Add a marker in Sydney and move the camera
         LatLng sydney = new LatLng(28.546274, 77.335576);
-        mapApi.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+
+        mapApi.addMarker(new MarkerOptions().position(sydney).title("Marker in Amity Noida "));
         mapApi.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+
+        locationListener = new LocationListener() {
+            @Override
+            public void onLocationChanged(Location Location) {
+                try{
+                    latLng = new LatLng(Location.getLatitude(),Location.getLongitude());
+
+                    mapApi.addMarker(new MarkerOptions().position(latLng).title("Marker in Amity Noida "));
+                    mapApi.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+                }
+                catch (SecurityException e){
+                    e.printStackTrace();
+                }
+
+
+            }
+            @Override
+            public void onStatusChanged(String s,  int i , Bundle bundle ) {
+
+            }
+
+            @Override
+            public void onProviderEnabled(String s ) {
+            }
+            @Override
+            public void onProviderDisabled(String s ) {
+
+            }
+        };
+
+        locationManager = (LocationManager)getSystemService(LOCATION_SERVICE);
+
+        try {
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,MIN_TIME,MIN_DIST,locationListener);
+        }
+        catch (SecurityException e){{
+            e.printStackTrace();
+        }}
+
+
+
     }
 }
