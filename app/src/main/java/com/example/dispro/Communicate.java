@@ -2,6 +2,9 @@ package com.example.dispro;
 
 import android.os.AsyncTask;
 import android.util.Log;
+
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -19,6 +22,21 @@ public class Communicate {
         SocketSend socketSend=new SocketSend();
         try {
             rec=socketSend.execute(txt).get(5, TimeUnit.SECONDS);
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (TimeoutException e) {
+            e.printStackTrace();
+        }
+        return rec;
+    }
+    public String communicate(JSONObject jsonObject){
+        String rec="<error>";
+        String jsonTxt= jsonObject.toString();
+        SocketSend socketSend=new SocketSend();
+        try {
+            rec=socketSend.execute(jsonTxt).get(5, TimeUnit.SECONDS);
         } catch (ExecutionException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {

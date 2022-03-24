@@ -1,5 +1,7 @@
 package com.example.dispro;
 
+import static com.example.dispro.ui.poll.PollViewModel.CAM_REQUEST_CODE;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -77,8 +79,16 @@ public class Addition extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==CAM_REQUEST_CODE) {
-            Bitmap img_b=(Bitmap) data.getExtras().get("data");
-            img.setImageBitmap(img_b);
+            try {
+                Bitmap img_b = (Bitmap) data.getExtras().get("data");
+                if (img_b.getHeight()>0){
+                    img.setImageBitmap(img_b);
+                }
+                else{
+                    Bitmap err = null;
+                    img.setImageBitmap((Bitmap) err);
+                }
+            }catch (Exception e){}
         }
     }
 }

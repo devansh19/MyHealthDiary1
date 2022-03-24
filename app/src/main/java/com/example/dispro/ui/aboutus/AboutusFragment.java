@@ -1,15 +1,20 @@
 package com.example.dispro.ui.aboutus;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.dispro.Communicate;
+import com.example.dispro.R;
 import com.example.dispro.databinding.FragmentAboutusBinding;
 import com.example.dispro.databinding.FragmentContactBinding;
 import com.example.dispro.ui.contacts.ContactViewModel;
@@ -31,5 +36,6 @@ public class AboutusFragment extends Fragment {
         aboutusViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
+
 
 }
