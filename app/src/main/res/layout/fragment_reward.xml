@@ -27,8 +27,10 @@
         android:layout_height="wrap_content"
         android:text="Rewards"
         android:textAlignment="center"
+        android:textAllCaps="true"
         android:textColor="#096AB8"
         android:textSize="35sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,10 +43,9 @@
         android:layout_height="275dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.061"
         tools:src="@tools:sample/backgrounds/scenic" />
 
     <Button
