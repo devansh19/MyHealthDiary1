@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:text="Rewards"
         android:textAlignment="center"
-        android:textColor="@color/purple_700"
+        android:textColor="#096AB8"
         android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
