@@ -51,27 +51,30 @@
 
     <Button
         android:id="@+id/Review"
-        android:layout_width="284dp"
-        android:layout_height="56dp"
+        android:layout_width="180dp"
+        android:layout_height="100dp"
         android:text="@string/home_review"
-        app:layout_constraintBottom_toTopOf="@+id/Addition"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.664" />
 
     <Button
         android:id="@+id/Addition"
-        android:layout_width="284dp"
-        android:layout_height="56dp"
+        android:layout_width="180dp"
+        android:layout_height="100dp"
         android:text="@string/home_addition"
+        app:icon="@drawable/ic_menu_camera"
+        app:iconSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.939"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.699" />
+        app:layout_constraintVertical_bias="0.664" />
+
     <ViewFlipper
         android:id="@+id/viewFlipper2"
         android:layout_width="382dp"
@@ -104,11 +107,6 @@
 
 
     </ViewFlipper>
-
-
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

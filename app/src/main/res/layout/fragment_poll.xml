@@ -22,23 +22,23 @@
 
     <Button
         android:id="@+id/poll_Capture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_width="180dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="36dp"
         android:text="Capture"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.234"
+        app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/poll_imageView" />
 
     <Button
         android:id="@+id/poll_Gallery"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="180dp"
+        android:layout_height="100dp"
         android:text="Gallery"
         app:layout_constraintBottom_toBottomOf="@+id/poll_Capture"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.772"
+        app:layout_constraintHorizontal_bias="0.965"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/poll_Capture"
         app:layout_constraintVertical_bias="0.0" />
