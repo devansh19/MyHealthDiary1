@@ -56,7 +56,7 @@ class SocketSend extends AsyncTask<String, Void, String> {
     String buffer = "";
     int inp=-2;
 
-    final private String ip="192.168.0.103";
+    final private String ip="192.168.246.177";
     final private int port = 5000;
 
     @Override
