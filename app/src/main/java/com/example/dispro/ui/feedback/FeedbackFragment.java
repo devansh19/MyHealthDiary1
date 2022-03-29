@@ -49,9 +49,9 @@ public class FeedbackFragment extends Fragment {
         submit_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String msg="Working";
                 String feedback_text= feedback.getText().toString();
-                msg=new Communicate().communicate(feedback_text);
+                String msg="{\"Frag\": \"Feedback\", \"text\":"+feedback_text+"}";
+                msg=new Communicate().communicate(msg);
                 Toast.makeText(getActivity(), "Thanks for your valuable feedback", Toast.LENGTH_SHORT).show();
 //                Fragment fragment= new tasks();
 //                FragmentManager fragmentManager=getActivity().getSupportFragmentManager();

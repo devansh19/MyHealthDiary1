@@ -44,29 +44,18 @@ public class LoginFragment extends Fragment {
         super.onStart();
         Button login_button=(Button) getActivity().findViewById(R.id.submit_button);
 
-//        login_button.setOnClickListener(new View.OnClickListener() {
-//        @Override
-//        public void onClick(View view) {
-//            EditText Phno = (EditText) getActivity().findViewById(R.id.editTextPhone);
-//            EditText pass = (EditText) getActivity().findViewById(R.id.editTextPassword);
-//            String msg="Working";
-//            String feedback_text= Phno.getText().toString();
-//            String pass_text= pass.getText().toString();
-////            JSONObject det=new JSONObject();
-////            try {
-////                det.put("sec","login");
-////                det.put("phno",phno_text);
-////                det.put("pass",pass_text);
-////            } catch (JSONException e) {
-////                e.printStackTrace();
-////            }
-////            msg=new Communicate().communicate(det);
-//            Toast.makeText(getActivity(), "Thanks for your valuable feedback", Toast.LENGTH_SHORT).show();
-////                Fragment fragment= new tasks();
-////                FragmentManager fragmentManager=getActivity().getSupportFragmentManager();
-////                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-////                fragmentTransaction.replace(R.id.nav_host_fragment_content_main,R.id.HomeFragment);
-//            }
-//        });
+        login_button.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            EditText Phno = (EditText) getActivity().findViewById(R.id.editTextPhone_Number);
+            EditText pass = (EditText) getActivity().findViewById(R.id.editTextPassword);
+            String ph_text= Phno.getText().toString();
+            String pass_text= pass.getText().toString();
+            String msg="{\"Frag\": \"Login\", \"ph\":"+ph_text+", \"pass\":"+pass_text+"}";
+            msg=new Communicate().communicate(msg);
+
+            Toast.makeText(getActivity(), "Thanks for your valuable feedback", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
