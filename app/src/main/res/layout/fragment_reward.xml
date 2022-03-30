@@ -37,23 +37,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.055" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="395dp"
-        android:layout_height="275dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16"
-        app:layout_constraintVertical_bias="0.061"
-        tools:src="@tools:sample/backgrounds/scenic" />
-
     <Button
         android:id="@+id/button4"
         android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:text="Rewards"
-        app:icon="@drawable/ic_menu_rewards"
+        android:layout_height="70dp"
+        android:text="Share"
+        android:textSize="12sp"
+        app:icon="@drawable/ic_menu_share"
         app:iconGravity="textStart"
         app:iconPadding="1dp"
         app:iconSize="22dp"
@@ -61,38 +51,42 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.028"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.579" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="2dp"
-        android:text="Badges"
-        app:icon="@drawable/ic_menu_badge"
-        app:iconGravity="textStart"
-        app:iconSize="22dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button4"
-        app:layout_constraintEnd_toStartOf="@+id/button6"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/button4"
-        app:layout_constraintTop_toTopOf="@+id/button4"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        app:layout_constraintVertical_bias="0.061" />
 
     <Button
         android:id="@+id/button6"
         android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="135dp"
+        android:layout_height="70dp"
         android:layout_weight="1"
         android:text="History"
+        android:textSize="12sp"
         app:icon="@drawable/ic_menu_history"
         app:iconGravity="textStart"
         app:iconSize="22dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button5"
+        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
         app:layout_constraintStart_toEndOf="@+id/button4"
-        app:layout_constraintTop_toTopOf="@+id/button5"
+        app:layout_constraintTop_toTopOf="@+id/button"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="130dp"
+        android:layout_height="70dp"
+        android:text="Get more rewards"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:icon="@drawable/ic_menu_getmorerewards"
+        app:iconGravity="textStart"
+        app:iconPadding="1dp"
+        app:iconSize="22dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/button6"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintTop_toTopOf="@+id/button4"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

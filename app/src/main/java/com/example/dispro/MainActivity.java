@@ -3,6 +3,8 @@ package com.example.dispro;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -49,6 +51,13 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        Spinner foodname = (Spinner) findViewById(R.id.spinner);
+
+        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(MainActivity.this,
+                android.R.layout.simple_expandable_list_item_1, getResources().getStringArray(R.array.itemname));
+        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        foodname.setAdapter(myAdapter);
     }
 
     @Override
