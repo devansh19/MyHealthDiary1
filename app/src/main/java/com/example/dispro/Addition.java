@@ -16,8 +16,10 @@ import android.media.Image;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.security.AccessController;
@@ -48,6 +50,13 @@ public class Addition extends AppCompatActivity {
 
             }
         });
+
+        Spinner foodname = (Spinner) findViewById(R.id.spinner);
+
+        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_expandable_list_item_1, getResources().getStringArray(R.array.itemname));
+        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        foodname.setAdapter(myAdapter);
     }
 
     private void camPermission() {

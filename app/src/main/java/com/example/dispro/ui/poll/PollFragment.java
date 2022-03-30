@@ -61,7 +61,7 @@ public class PollFragment extends Fragment {
 
             }
         });
-        cam_btn.performClick();
+//        cam_btn.performClick();
         final TextView textView = binding.textPoll;
         pollViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;

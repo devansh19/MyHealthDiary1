@@ -17,6 +17,7 @@
     <string name="menu_logout">Logout</string>
     <string name="menu_poll">Contribute</string>
     <string-array name="itemname">
+        <item>Tomato</item>
         <item>Papaya</item>
         <item>Apple</item>
         <item>Guava</item>
