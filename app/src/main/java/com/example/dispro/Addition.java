@@ -15,6 +15,7 @@ import android.graphics.Bitmap;
 import android.media.Image;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Base64;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -22,6 +23,12 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.ByteArrayOutputStream;
 import java.security.AccessController;
 
 public class Addition extends AppCompatActivity {
@@ -29,7 +36,9 @@ public class Addition extends AppCompatActivity {
     public static final int CAM_PERMISSION_CODE = 101;
     public static final int CAM_REQUEST_CODE = 102;
     ImageView img;
-    Button cam_btn,gal_btn;
+    Button cam_btn,gal_btn,add_btn;
+    Bitmap img_b;
+    String JSON_STRING;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +47,7 @@ public class Addition extends AppCompatActivity {
         img=findViewById(R.id.Capure_imageView);
         cam_btn=findViewById(R.id.Capture);
         gal_btn=findViewById(R.id.Gallery);
+        add_btn=findViewById(R.id.Add);
         cam_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,6 +58,30 @@ public class Addition extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+            }
+        });
+        add_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (img_b.getHeight()>0){
+                    JSON_STRING = "{\"img_data\":\"\",\"ending\":1}";
+                    try {
+                        JSONObject obj = new JSONObject(JSON_STRING);
+
+                        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                        img_b.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+                        byte[] byteArray = stream.toByteArray();
+                        String result = Base64.encodeToString(byteArray, Base64.DEFAULT);
+//                        result="parth";
+                        obj.put("img_data", result);
+                        String msg="Working";
+                        msg=new Communicate().communicate(obj);
+                        Snackbar.make(view, Integer.toString(result.length()), Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         });
 
@@ -89,7 +123,7 @@ public class Addition extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==CAM_REQUEST_CODE) {
             try {
-                Bitmap img_b = (Bitmap) data.getExtras().get("data");
+                img_b = (Bitmap) data.getExtras().get("data");
                 if (img_b.getHeight()>0){
                     img.setImageBitmap(img_b);
                 }
