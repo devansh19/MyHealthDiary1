@@ -22,21 +22,17 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="Contribute" />
         <item
-            android:id="@+id/nav_dropzone"
-            android:icon="@drawable/ic_menu_dropzone"
-            android:title="Drop Zone" />
+            android:id="@+id/shop"
+            android:icon="@drawable/shop"
+            android:title="Shop" />
         <item
-            android:id="@+id/nav_rewards"
-            android:icon="@drawable/ic_menu_rewards"
-            android:title="Rewards" />
-        <item
-            android:id="@+id/nav_goals"
-            android:icon="@android:drawable/ic_menu_myplaces"
-            android:title="@string/menu_goals" />
-        <item
-            android:id="@+id/nav_joinus"
-            android:icon="@android:drawable/star_big_off"
-            android:title="Join Us" />
+            android:id="@+id/progress_circular"
+            android:icon="@drawable/ic_menu_history"
+            android:title="Progress" />
+
+
+
+
     </group>
 
     <group android:checkableBehavior="single">

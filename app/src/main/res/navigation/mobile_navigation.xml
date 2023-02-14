@@ -18,28 +18,10 @@
         tools:layout="@layout/fragment_contact" />
 
     <fragment
-        android:id="@+id/nav_dropzone"
-        android:name="com.example.dispro.ui.dropzone.DropzoneFragment"
-        android:label="@string/menu_dropzone"
-        tools:layout="@layout/fragment_dropzone" />
-
-    <fragment
         android:id="@+id/nav_feedback"
         android:name="com.example.dispro.ui.feedback.FeedbackFragment"
         android:label="@string/menu_feedback"
         tools:layout="@layout/fragment_feedback" />
-
-    <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.dispro.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
-    <fragment
-        android:id="@+id/nav_goals"
-        android:name="com.example.dispro.ui.goals.goalsFragment"
-        android:label="@string/menu_goals"
-        tools:layout="@layout/fragment_goals" />
 
     <fragment
         android:id="@+id/nav_home"
@@ -64,12 +46,6 @@
         android:name="com.example.dispro.ui.logout.LogoutFragment"
         android:label="@string/menu_logout"
         tools:layout="@layout/fragment_logout" />
-
-    <fragment
-        android:id="@+id/nav_poll"
-        android:name="com.example.dispro.ui.poll.PollFragment"
-        android:label="@string/menu_poll"
-        tools:layout="@layout/fragment_poll" />
 
     <fragment
         android:id="@+id/nav_register"

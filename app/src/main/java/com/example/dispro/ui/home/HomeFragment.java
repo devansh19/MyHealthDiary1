@@ -2,22 +2,17 @@ package com.example.dispro.ui.home;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.dispro.Addition;
-import com.example.dispro.Communicate;
 import com.example.dispro.DBM;
 import com.example.dispro.R;
 import com.example.dispro.Review;
@@ -45,7 +40,7 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textHome;
+        final TextView textView = binding.textView7;
         homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
@@ -94,8 +89,8 @@ public class HomeFragment extends Fragment {
 //                builder.setMessage(buffer.toString());
 //                builder.show();
 
-                Intent intent = new Intent(Addition_act, Addition.class);
-                startActivity(intent);
+
+
             }
         });
     }

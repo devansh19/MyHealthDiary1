@@ -6,42 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:text="@string/save_food_save_life"
 
-        android:textAlignment="center"
-        android:textColor="@color/teal_700"
-        android:textSize="17sp"
-
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:indeterminateOnly="false"
+        android:progressDrawable="@drawable/custom_progress"
+        app:layout_constraintBottom_toTopOf="@+id/startProgess"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textHome"
+    <Button
+        android:id="@+id/startProgess"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_marginTop="44dp"
-        android:text=""
-        android:textAlignment="center"
-        android:textColor="#7C4DFF"
-
-        android:textSize="17sp"
-        android:visibility="invisible"
+        android:layout_height="wrap_content"
+        android:text="Start Progress"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.448"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="Stacker"
+        android:text="@string/MyHealthDiary"
         android:textAllCaps="true"
         android:textColor="#096AB8"
         android:textSize="35sp"
@@ -56,10 +52,8 @@
         android:id="@+id/Review"
         android:layout_width="170dp"
         android:layout_height="100dp"
-        android:text="@string/home_review"
-        app:icon="@drawable/ic_menu_review"
-        app:iconGravity="textStart"
-        app:iconSize="25dp"
+        android:text="Buy Products"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.11"
@@ -71,9 +65,11 @@
         android:id="@+id/Addition"
         android:layout_width="170dp"
         android:layout_height="100dp"
-        android:text="@string/home_addition"
-        app:icon="@drawable/ic_menu_camera"
+        android:text="Profile"
+        app:icon="@drawable/ic_menu_review"
+        app:iconGravity="textStart"
         app:iconSize="25dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.89"
@@ -81,38 +77,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.664" />
 
-    <ViewFlipper
-        android:id="@+id/viewFlipper2"
-        android:layout_width="382dp"
-        android:layout_height="204dp"
-        android:autoStart="true"
-        android:flipInterval="3000"
-        android:inAnimation="@android:anim/slide_in_left"
-        android:outAnimation="@android:anim/slide_out_right"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.246">
 
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/one"
-            android:contentDescription="@string/manure_image" />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/two"
-            android:contentDescription="@string/manure_image"/>
-
-
-
-
-
-    </ViewFlipper>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
